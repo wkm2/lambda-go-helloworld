@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - go-helloworld:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "go-helloworld"
+        alias: "go-helloworld"
+        CurrentVersion: "$LATEST"
+        TargetVersion: "$LATEST"

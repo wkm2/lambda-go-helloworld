@@ -1,6 +1,6 @@
 # Go Helloworld for Lambda
 ## Go App
-Code according to the following document
+Code according to the following document  
 https://github.com/aws/aws-lambda-go
 
 ## buildspec.yml
