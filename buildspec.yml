@@ -18,3 +18,4 @@ phases:
       - echo Build completed on `date` 
       - echo Pushing the Docker image... 
       - aws s3 cp main.zip s3://lambda-go-helloworld/
+      - aws s3 cp appspec.yml s3://lambda-go-helloworld/
