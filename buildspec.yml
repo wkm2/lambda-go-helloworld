@@ -1,0 +1,17 @@
+version: 0.2 
+ 
+phases: 
+  install:
+    runtime-versions:
+      golang: 1.13
+  build: 
+    commands: 
+      - echo Build started on `date`
+      - echo Building the go app...
+      - GOOS=linux GOARCH=amd64 go build -o main main.go
+      - zip main.zip main
+  post_build: 
+    commands: 
+      - echo Build completed on `date` 
+      - echo Pushing the Docker image... 
+      - aws s3 cp main.zip s3://lambda-go-helloworld/
